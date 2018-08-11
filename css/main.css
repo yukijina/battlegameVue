@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  height: 100vh;
+  background: linear-gradient(to right,rgba(135, 55, 45, 0.50),rgb(60, 40, 48,0.50)), url(../img/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+header {
+  margin: 5% auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+.bar-wrapper {
+  width: 20rem;
+  height: 4rem;
+  background-color: tomato;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.bar-wrapper p {
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 18px;
+}
+
+/* Button section */
+button {
+  width: 11rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#btn-start {
+  background-color: rgb(242, 62, 146);
+  display: block;
+  margin: 5% auto;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+
+#btn1,
+#btn2,
+#btn3,
+#btn4 {
+  margin: 0 0.3rem;;
+}
+
+
+#btn1 {
+  background-color: rgb(70, 137, 162);
+}
+#btn2 {
+  background-color: rgb(246, 160, 128);
+}
+#btn3 {
+  background-color: rgb(159, 238, 157);
+}
+#btn4 {
+  background-color: rgb(143, 150, 154);
+}
