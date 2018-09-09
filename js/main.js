@@ -11,19 +11,53 @@ new Vue ({
       this.playerHealth = 100;
       this.monsterHealth = 100;
     },
-    calcDamage: function(max, min) {
-      return Math.floor(Math.random() * max) + min;
+    attack: function() {
+      var damage = this.calcDamage(3,10);
+      this.monsterHealth -= damage;
+      if(this.checkWin()) {
+        return;
+      }
+      this.monsterAttacks();
+      this.checkWin();
     },
-    attack: function(max, min) {
-      this.monsterAttack();
-      this.monsterHealth -= this.calcDamage(max, min);
-    },
-    monsterAttack: function() {
-      this.playerHealth -= this.calcDamage(18, 6);
+    superAttack: function() {
+      var damage = this.calcDamage(10,20);
+      this.monsterHealth -= damage;
+      if(this.checkWin()) {
+        return;
+      }
+      this.monsterAttacks();
     },
     heal: function() {
-      this.playerHealth += this.calcDamage(16, 10);
-      this.monsterAttack();
+      if(this.playherHealth <= 80) {
+        this.playerHealth += 5;
+      } else {
+        this.playerHealth = 100;
+      }
+      this.monsterAttacks();
+    },
+    giveUp: function() {
+      alert('game is over');
+      this.isRunning = false;
+    },
+    monsterAttacks: function() {
+      var damage = this.calcDamage(5,12);
+      this.playerHealth -= damage;
+      this.checkWin();
+    },
+    calcDamage: function(min, max) {
+      return Math.max(Math.floor(Math.random() * max) +1, min);
+    },
+    checkWin: function() {
+      if(this.monsterHealth <=0) {
+        if(confirm('You won! New Game?')){
+          this.start();
+        } else {
+          this.isRunnung = false;
+        }
+        return true;
+      }
+      return false;
     }
-  }
-})
+  } //the end of method
+}) //the end of Vue

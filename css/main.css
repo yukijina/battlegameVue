@@ -6,22 +6,54 @@
 
 body {
   font-family: 'Cinzel', serif;
-  height: 100vh;
-  background: linear-gradient(to right,rgba(135, 55, 45, 0.50),rgb(60, 40, 48,0.50)), url(../img/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #fff;
 }
 
 header {
-  margin: 5% auto;
+  margin: 0 auto;
+  height: 95vh;
+  background: linear-gradient(to right,rgba(135, 55, 45, 0.50),rgb(60, 40, 48,0.50)), url(../img/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1,
 h2 {
   text-align: center;
   font-weight: 700;
+}
+
+h1 {
+  padding-top: 5%;
+}
+
+i {
+  font-size: 2rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 15px 20px;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+#app {
+  background-color: rgb(249, 230, 188);
+  padding-bottom: 4%;
+}
+
+h2 {
+  color: #000;
+}
+
+.image-box {
+ text-align: center;
+}
+
+img {
+  max-height: 300px;
 }
 
 .bar-wrapper {
@@ -50,7 +82,7 @@ button {
 #btn-start {
   background-color: rgb(242, 62, 146);
   display: block;
-  margin: 5% auto;
+  margin: 1.5% auto;
 }
 
 .btn-wrapper {
@@ -62,7 +94,7 @@ button {
 #btn2,
 #btn3,
 #btn4 {
-  margin: 0 0.3rem;;
+  margin: 1.5% 0.3rem;;
 }
 
 
@@ -77,4 +109,14 @@ button {
 }
 #btn4 {
   background-color: rgb(143, 150, 154);
+}
+
+footer {
+  margin: 0 auto;
+  background-color: rgba(135, 55, 45);
+  padding: 2% 0;
+}
+
+footer p {
+  font-size: 1.2rem;
 }
